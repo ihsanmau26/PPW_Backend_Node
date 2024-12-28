@@ -7,7 +7,7 @@ const Photo = sequelize.define('Photo', {
     allowNull: false,
   },
   photo: {
-    type: DataTypes.STRING, // Path to the photo file
+    type: DataTypes.STRING,
     allowNull: false,
   },
 });

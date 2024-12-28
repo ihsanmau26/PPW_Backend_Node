@@ -5,14 +5,12 @@ const photoRoutes = require('./routes/photoRoutes');
 const app = express();
 const cors = require('cors');
 
-// CORS Configuration
 const corsOptions = {
-    origin: 'http://127.0.0.1:3000', // Atau '*', jika Anda ingin mengizinkan semua origin
-    methods: 'GET,POST,PUT,DELETE',   // Tentukan metode HTTP yang diizinkan
-    allowedHeaders: 'Content-Type, Authorization', // Tentukan header yang diizinkan
+    origin: 'http://127.0.0.1:3000',
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type, Authorization',
 };
 
-// Gunakan middleware CORS
 app.use(cors(corsOptions));
 
 app.use(express.json());
