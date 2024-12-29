@@ -7,7 +7,7 @@ const router = express.Router();
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, '../../tubes-api/public/storage/image'));
+    cb(null, path.join(__dirname, '../../laravel-tubes-api/public/storage/image'));
   },
   filename: (req, file, cb) => {
     cb(null, `${Date.now()}-${file.originalname}`);
@@ -101,7 +101,7 @@ router.delete('/:user_id', async (req, res) => {
     }
 
     const fs = require('fs');
-    const filePath = path.join(__dirname, '../../tubes-api/public', photo.photo);
+    const filePath = path.join(__dirname, '../../laravel-tubes-api/public', photo.photo);
     if (fs.existsSync(filePath)) {
       fs.unlinkSync(filePath);
     }
